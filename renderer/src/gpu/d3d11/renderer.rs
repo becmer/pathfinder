@@ -797,6 +797,7 @@ impl<D> RendererD3D11<D> where D: Device {
 
 // Buffer data
 
+#[allow(unused)]
 #[derive(Clone)]
 struct TileBatchInfoD3D11 {
     tile_count: u32,

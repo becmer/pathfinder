@@ -30,7 +30,6 @@ use std::mem;
 use std::ops::Range;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
-use std::u64;
 
 static NEXT_SCENE_ID: AtomicUsize = AtomicUsize::new(0);
 
@@ -489,6 +488,7 @@ pub struct PathId(pub u32);
 /// This can be useful for creating "stamps" or "symbols" that are rendered once and reused. It can
 /// also be useful for image effects that require many paths to be processed at once; e.g. opacity
 /// applied to a group of paths.
+#[allow(unused)]
 #[derive(Clone, Debug)]
 pub struct RenderTarget {
     size: Vector2I,

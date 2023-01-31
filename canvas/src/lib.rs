@@ -481,7 +481,6 @@ impl CanvasRenderingContext2D {
             scene.pop_render_target();
             scene.push_draw_path(path_y);
         }
-
     }
 
     // Transformations
@@ -627,6 +626,7 @@ impl CanvasRenderingContext2D {
     }
 }
 
+#[allow(unused)]
 #[derive(Clone)]
 struct State {
     transform: Transform2F,

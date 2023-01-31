@@ -36,7 +36,6 @@ use pathfinder_gpu::{RenderOptions, RenderState, RenderTarget, StencilFunc, Sten
 use pathfinder_gpu::{TextureDataRef, TextureFormat, UniformData};
 use pathfinder_resources::ResourceLoader;
 use pathfinder_simd::default::F32x2;
-use std::u32;
 
 const MAX_FILLS_PER_BATCH: usize = 0x10000;
 
@@ -113,7 +112,6 @@ impl<D> RendererD3D9<D> where D: Device {
 
         TileBufferD3D9 { tile_vertex_buffer_id }
     }
-
 
     fn ensure_index_buffer(&mut self, core: &mut RendererCore<D>, mut length: usize) {
         length = length.next_power_of_two();
@@ -560,6 +558,7 @@ impl<D> RendererD3D9<D> where D: Device {
     }
 }
 
+#[allow(unused)]
 #[derive(Clone)]
 pub(crate) struct TileBatchInfoD3D9 {
     pub(crate) tile_count: u32,

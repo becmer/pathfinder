@@ -56,6 +56,7 @@ pub(crate) struct SceneBuilder<'a, 'b, 'c, 'd> {
     pub(crate) sink: &'c mut SceneSink<'d>,
 }
 
+#[allow(unused)]
 #[derive(Debug)]
 pub(crate) struct ObjectBuilder {
     pub built_path: BuiltPath,
@@ -63,6 +64,7 @@ pub(crate) struct ObjectBuilder {
     pub bounds: RectF,
 }
 
+#[allow(unused)]
 // Derives `Clone` just so we can use `Cow`, not because we actually want to clone it.
 #[derive(Clone, Debug)]
 struct BuiltDrawPath {
@@ -94,6 +96,7 @@ impl BuiltDrawPath {
     }
 }
 
+#[allow(unused)]
 // Derives `Clone` just so we can use `Cow`, not because we actually want to clone it.
 #[derive(Clone, Debug)]
 pub(crate) struct BuiltPath {
@@ -127,6 +130,7 @@ pub(crate) struct BuiltPathTransformCPUBinGPUData {
     pub outline: Outline,
 }
 
+#[allow(unused)]
 #[derive(Clone, Copy, Debug)]
 pub(crate) struct Occluder {
     pub(crate) coords: Vector2I,

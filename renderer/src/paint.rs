@@ -330,6 +330,7 @@ pub(crate) struct PaintMetadata {
     pub(crate) is_opaque: bool,
 }
 
+#[allow(unused)]
 #[derive(Debug)]
 pub(crate) struct PaintColorTextureMetadata {
     /// The location of the paint.
@@ -350,6 +351,7 @@ pub(crate) struct PaintColorTextureMetadata {
     pub(crate) border: Vector2I,
 }
 
+#[allow(unused)]
 #[derive(Clone, Copy, Debug)]
 pub(crate) struct RadialGradientMetadata {
     /// The line segment that connects the two circles.
